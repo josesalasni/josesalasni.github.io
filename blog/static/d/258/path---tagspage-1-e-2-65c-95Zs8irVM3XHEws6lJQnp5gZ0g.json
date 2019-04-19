@@ -1,0 +1,1 @@
+{"data":{"site":{"siteMetadata":{"title":"Gatsby Paginated Blog"}},"allMarkdownRemark":{"group":[{"fieldValue":"Chicago","totalCount":3},{"fieldValue":"animals","totalCount":3},{"fieldValue":"zoos","totalCount":3}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}

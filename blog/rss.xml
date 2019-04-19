@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog de Carlos Salas]]></title><description><![CDATA[Un blog acerca de tutoriales e información de temas de programación en español.]]></description><link>https://josesalasni.github.io/blog/</link><generator>RSS for Node</generator><lastBuildDate>Fri, 19 Apr 2019 22:53:50 GMT</lastBuildDate><item><title><![CDATA[Como centrar un elemento dentro de un div en html]]></title><description><![CDATA[Hola, este es el primer post de este blog. Servirá a modo de pruebas para comprobar si esta correcto el funcionamiento de todas las…]]></description><link>https://josesalasni.github.io/blog//como-centrar-un-elemento-dentro-de-un-div-en-html/</link><guid isPermaLink="false">https://josesalasni.github.io/blog//como-centrar-un-elemento-dentro-de-un-div-en-html/</guid><pubDate>Fri, 19 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hola, este es el primer post de este blog. Servirá a modo de pruebas para comprobar si esta correcto el funcionamiento de todas las librerías integradas, así como el diseño. Bueno aclarando el propósito del post procedo a realizar el tutorial.&lt;/p&gt;
+&lt;p&gt;Para realizarlo, tienen que modificar tanto el css del div padre, como el elemento o div hijo que quieran centrar, supongamos por ejemplo esta estructura en Html.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;parent&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;children&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+            &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; hello world &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para lograrlo, tenemos que modificar el css de ambos, ya sea en una hoja aparte de .css que importemos en el cabezal del documento html, o ahi mismo, en el div padre, tenemos que colocar alineación de texto centrada con la propiedad text-align, y en el elemento hijo, hay que configurar la propiedad display, con el parámetro inline-block. Como en el siguiente ejemplo.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div style&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;text-align:center;&quot;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;parent&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div style&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;display:inline-block;&quot;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;children&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+            &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; hello world &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finalmente tenemos el resultado en la siguiente captura de pantalla, cable aclarar que este código les servira para diseño responsive, así como trabajar con grids de distintas librerias de diseño. Bueno muchas gracias por leer.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/31eeca10aaf77fcf60421a44aa1f7815/95139/resultado.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.22254758418741%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABNUlEQVQoz5WQ607CQBCF9yUEtHub2e1dLCoRsV7+YJBX8DF8K4xGYxET+KFvVRKhOoJpakwTnXzJnj2ZPTNZ1utfJJ0eYCSVx4UllPY1BEJawuEYhAf99Co9Hx2nl/3T4cnZsHMz2r8e9LoDFre7fhCh9bRxNRowNm4fBmHCBZRo8Hb3jtBQIkhlBCBXYN2YoQnR2CiOvDB2vUCB8cNEaloBhMQSQJ8LEiDI/xLIuWZoIylRUZ40JByu6LEG9+djQzOqWRsYTaeDltlAwUHUAfSqplSWlqtcv2H0Q1sNp9HkG0iT02xJ0q0d2dqWa1843JQ9JSybvDxl0yrkEA+P2Xh8N769J5FNpr/bCPZRU6vVKs/zxSIviqKuh73X1HK5LNZFoq6ndvJfis3mb7P5K/E8nf2XT+IyOCvPmlogAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Screenshot&quot;
+        title=&quot;&quot;
+        src=&quot;/blog/static/31eeca10aaf77fcf60421a44aa1f7815/b9e4f/resultado.png&quot;
+        srcset=&quot;/blog/static/31eeca10aaf77fcf60421a44aa1f7815/cf440/resultado.png 148w,
+/blog/static/31eeca10aaf77fcf60421a44aa1f7815/d2d38/resultado.png 295w,
+/blog/static/31eeca10aaf77fcf60421a44aa1f7815/b9e4f/resultado.png 590w,
+/blog/static/31eeca10aaf77fcf60421a44aa1f7815/f9b6a/resultado.png 885w,
+/blog/static/31eeca10aaf77fcf60421a44aa1f7815/2d849/resultado.png 1180w,
+/blog/static/31eeca10aaf77fcf60421a44aa1f7815/95139/resultado.png 1366w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;</content:encoded></item></channel></rss>
