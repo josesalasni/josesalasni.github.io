@@ -19,23 +19,42 @@
 		<nav id="topbar">
 			<div id="navbar" class="z-depth-1 nav-wrapper">
 				<ul id="nav-mobile" class="left">
-					<li><a onclick="AboutMe()">About me</a></li>
-					<li><a onclick="Projects()">Projects</a></li>
-					<li><a onclick="Technologies()">Technologies</a></li>
+					<li><a onclick="start()">Carlos Salas</a></li>
                 </ul>
                 <ul id="nav-mobile" class="right">
-					<li><a href="https://josesalasni.github.io/blog" target="_blank" >My Blog</a></li>
-					
+                    <li>
+                        <a href="#" onclick=" openNav()  ;event.preventDefault();">
+                            <i class="material-icons">menu</i>
+                        </a>
+                    </li>
+                    
 				</ul>
 			</div>
-		</nav>
+        </nav>
+        
+         <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="#" onclick="AboutMe(); event.preventDefault();">About me</a>
+                <a href="#" onclick="Technologies(); event.preventDefault(); ">Technologies</a>
+				<a href="#" onclick="Projects(); event.preventDefault();">Projects</a>
+                <a href="https://josesalasni.github.io/blog" onclick="closeNav()" target="_blank" >Blog</a>
+            </div>
+        
+        </div>
+
 	</header>
 		  
-	<main>
+	<main id="maincontent">
 		<div class="row">
 			<div id="index-banner" class="z-depth-1" >
 				<div class="section no-pad-bot">
-					<div class="container">
+					<div id="presentation" class="container">
 						<br/> <br/> 
 						<h1 class="header center white-text text-lighten-2">Carlos Salas</h1>
 						<div class="row center">
@@ -43,7 +62,8 @@
 						</div>
 						<div class="appear-animation row center">
 							<a href="https://github.com/josesalasni" target="_blank" id="btn-presentation">Github Projects!</a>
-						</div>
+                            
+                        </div>
 						<br><br>
 					
 					</div>
@@ -56,7 +76,7 @@
 					<h4 class="center">About Me </h4>
                     <div class="border"></div>
 				</div>
-                <div id="about-me-right" class="appear-animation col s12 m8">
+                <div id="about-me-right" class="col s12 m8">
 					I'm a guy from Managua Nicaragua, student of Computer Programming, interested in the Web Technologies and the open-source projects.
                     I Am excited to contribute to the programming community and learn about Web and Mobile Aplications.
                     I consider myself a self-taught person. My Hobbies currently are the programming, the videogames and learn about the universe and improve my english.
@@ -65,7 +85,7 @@
             </div>
 
 			<div id="tech">
-				<h2 class="center white-text"> What Do i Use? </h2>
+				<h2 class="center white-text"> What do I use? </h2>
 				<h6 class="center white-text"> I Have experience in the following frameworks and technologies </h6> 
 				<div id="section-logos" class="center container row">
 					<div class="col s6 m4">
@@ -132,7 +152,7 @@
 								<div class="container">
 									<p style="font-style:italic; margin: 0" class="black-text center"> Variedades Mejia - Developed with WPF & SqlServer</p>
 									<p style="font-style:bold; margin-top: 30px "> Inventory control system developed to the SME Variedades Mejía.  </p>
-									<a href="https://github.com/tuturulab/VariedadesMejia" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Github</a>
+									<a href="https://github.com/tuturulab/VariedadesMejia" target="_blank" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Github</a>
 								</div>
 							</div>
 							<!-- Project PKMN card-->
@@ -141,8 +161,8 @@
 								<div class="container">
 									<p style="font-style:italic; margin: 0" class="center"> Pokémon TrainerCard - Developed with ReactJS</p>
 									<p style="font-style:bold; margin-top: 30px "> Project for make a fantastic Pokemon Trainer Card using React and Semantic-UI.  </p>
-									<a href="https://josesalasni.github.io/trainercard/" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Demo</a>
-									<a href="https://github.com/josesalasni/trainercard" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Github</a>
+									<a href="https://josesalasni.github.io/trainercard/" target="_blank" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Demo</a>
+									<a href="https://github.com/josesalasni/trainercard" target="_blank" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Github</a>
 								</div>
                             </div>
                             <!-- Griteria Android App  -->                 
@@ -151,7 +171,7 @@
 								<div class="container">
 									<p style="font-style:italic; margin: 0" class="center"> Griteria Nicaragua - Developed with Kotlin</p>
 									<p style="font-style:bold; margin-top: 30px "> Project for view lyrics and listen Music of the Nicaraguan Griteria to Virgen Maria.  </p>
-									<a href="https://github.com/josesalasni/GriteriaNicaragua" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Github</a>
+									<a href="https://github.com/josesalasni/GriteriaNicaragua" target="_blank" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Github</a>
 								</div>
                             </div>
                             
@@ -161,8 +181,8 @@
 								<div class="container">
 									<p style="font-style:italic; margin: 0" class="center"> My Blog  - Developed with ReactJS & Gatsby</p>
 									<p style="font-style:bold; margin-top: 30px "> Blog project about programming, implementing SPA arquitecture and static pages.  </p>
-									<a href="https://josesalasni.github.io/blog/" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Check on</a>
-									<a href="https://github.com/josesalasni/Blog" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small">Github</a>
+									<a href="https://josesalasni.github.io/blog/" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small" target="_blank">Check on</a>
+									<a href="https://github.com/josesalasni/Blog" style="margin: 10px;" class="waves-effect deep-purple darken-1 waves-light btn-small" target="_blank">Github</a>
 								</div>
                             </div>
 

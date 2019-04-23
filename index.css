@@ -8,6 +8,14 @@
 	background-color:#1c2331 ;
 }
 
+#presentation {
+    margin-top: 30px;
+}
+
+#menuitem {
+    cursor: pointer;
+}
+
 #btn-presentation {
 	margin-top: 60px;
 	background-color: transparent; /* Green */
@@ -32,6 +40,13 @@
     left: 0;
     right: 0;
     bottom: 0;
+    /*Eliminate hoverable */
+    -webkit-user-select:none;
+     -khtml-user-select:none;
+     -moz-user-select:none;
+     -o-user-select:none;
+      user-select:none;
+      pointer-events:none
 }
 
 .tool-word {
@@ -43,10 +58,19 @@
     left: 0;
     right: 0;
     bottom: 0;
+
+    /*Eliminate hoverable */
+    -webkit-user-select:none;
+     -khtml-user-select:none;
+     -moz-user-select:none;
+     -o-user-select:none;
+      user-select:none;
+      pointer-events:none
 }
 
 .img-project{
     width: 40% !important;
+    height: 400px !important;
 }
 
 .img-project-cel{
@@ -62,7 +86,8 @@
 
 #tech{
 	padding-top: 40px;
-	background-color: #6C5B7B;
+    background-color: #6C5B7B;
+    outline: 0 none;
 }
 
 #section-logos{
@@ -101,17 +126,15 @@
 	#about-me {
 		padding-top : 20px;
     }
-    
-    #topbar {
-        display: none !important;
-    }
 
     .img-project{
         width: 90% !important;
+        height: 350px !important;
     }
 
     .img-project-cel {
         width: 90% !important;
+        height: 350px !important;
     }
 
 	#about-me-left {
@@ -129,11 +152,11 @@
 .appear-animation {
     
 
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;
 }
 
 @keyframes fadein {
@@ -269,9 +292,11 @@
 .tooltip {
     position: relative;
     display: inline-block;
-  }
+
+    
+}
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     height: 50px;
@@ -292,9 +317,17 @@
     bottom: 105%;
     opacity: 0;
     transition: opacity 0.3s;
-  }
+
+    /*Eliminate hoverable */
+    -webkit-user-select:none;
+     -khtml-user-select:none;
+     -moz-user-select:none;
+     -o-user-select:none;
+      user-select:none;
+      pointer-events:none
+}
   
-  .tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
     bottom: 100%;  /* At the top of the tooltip */
@@ -303,9 +336,73 @@
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent white transparent;
-  }
+}
   
-  .tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+/* Overlay Menu */
+
+ /* The Overlay (background) */
+ .overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+
+    -webkit-transition: height 300ms linear;
+    -moz-transition: height 300ms linear;
+    -o-transition: height 300ms linear;
+    -ms-transition: height 300ms ease;  
+    transition: height 300ms linear;
   }
+
+  .overlay-active{
+    height: 100%;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    transition: 0.3s;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+    }
+}
+
