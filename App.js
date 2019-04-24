@@ -48,16 +48,15 @@ function start() {
 }
   
 function openNav() {
-    window.addEventListener("scroll", noscroll);
+    document.body.style.overflow = "hidden";
+
     document.getElementById("myNav").style.height = "100%";
 }
 
-function noscroll() {
-    window.scrollTo(0, 0);
-}
   
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-    window.removeEventListener("scroll", noscroll);
+    document.body.style.overflow = "";
+    document.body.style.overflowY = "scroll";
     document.getElementById("myNav").style.height = "0%";
 } 
