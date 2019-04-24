@@ -1,3 +1,17 @@
+html {
+    overflow: hidden;
+    width: 100%;
+}
+
+body{
+    height:100%;
+    position:fixed; /* prevent overscroll bounce*/
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch; /* iOS velocity scrolling */
+    width:100%;                    
+} 
+
+
 #index-banner {
 	background: #355C7D;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
@@ -131,12 +145,12 @@
 
     .img-project{
         width: 90% !important;
-        height: 350px !important;
+        height: 300px !important;
     }
 
     .img-project-cel {
-        width: 90% !important;
-        height: 350px !important;
+        width: 80% !important;
+        height: 300px !important;
     }
 
 	#about-me-left {
@@ -153,7 +167,6 @@
 
 .appear-animation {
     
-
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 4s; /* Firefox < 16 */
         -ms-animation: fadein 4s; /* Internet Explorer */
@@ -295,7 +308,8 @@
     position: relative;
     display: inline-block;
 
-    
+    /* Eliminate hover on touch */
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
   
 .tooltip .tooltiptext {
