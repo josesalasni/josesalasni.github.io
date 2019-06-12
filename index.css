@@ -422,3 +422,10 @@ body{
     }
 }
 
+#footer-style {
+    background-color: #6C5B7B;
+}
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
