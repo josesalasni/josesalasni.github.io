@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "styles.css"
   },
   {
-    "url": "main.bca5a4b70ca7ffa5aa78.bundle.js"
+    "url": "main.4a274b38db4ea6796cdf.bundle.js"
   },
   {
     "url": "da4ea5cdfca6b3baab285741f5ccb59f.ttf"
