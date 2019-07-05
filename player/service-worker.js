@@ -29,4 +29,5 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/\//, workbox.strategies.staleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/\//, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/\/player.html/, workbox.strategies.networkFirst(), 'GET');
