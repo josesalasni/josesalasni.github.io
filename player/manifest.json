@@ -15,7 +15,8 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "start_url": "/player/?utm_source=homescreen",
+  "start_url": "/",
+ 
   "theme_color": "#e4e4e4",
   "background_color": "#fff"
 }
