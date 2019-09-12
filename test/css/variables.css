@@ -3,6 +3,9 @@
 h1 {
   font-size: 4rem; }
 
+body, .smooth-container {
+  scroll-behavior: smooth; }
+
 .border {
   display: block;
   margin-top: 2em;
