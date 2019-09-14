@@ -46,16 +46,16 @@ document.getElementById("projectsclick").onclick = function(e) {
 }
 
 
-document.getElementById("techsclick").onclick = function(e) {
+document.getElementById("contactclick").onclick = function(e) {
   e.preventDefault();
   var offset = 00 // pixels for the clouds :)
   var duration = 800 // milliseconds
-  var tech = document.getElementById("tech");
+  var contact = document.getElementById("contact-section");
   //zenscroll.center( tech, duration, offset );
-  zenscroll.intoView(tech);
+  zenscroll.intoView(contact);
 }
 
-
+/*
 document.getElementById("aboutclick").onclick = function(e) {
   e.preventDefault();
   var offset = 370 // pixels for the clouds :)
@@ -64,6 +64,7 @@ document.getElementById("aboutclick").onclick = function(e) {
   //zenscroll.center( about, duration, offset );
   zenscroll.intoView(about);
 }
+*/
 
 document.getElementById("home-scroll-down").onclick = function(e) {
   e.preventDefault();
