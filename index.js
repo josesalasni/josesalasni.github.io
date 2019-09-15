@@ -29,7 +29,7 @@ setHeightCover();
 
 
 // Attaching the event listener function to window's resize event
-window.addEventListener("resize", setHeightCover);
+//window.addEventListener("resize", setHeightCover);
 
 
 zenscroll.setup(null, 0);
