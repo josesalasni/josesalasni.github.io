@@ -42,7 +42,7 @@ document.getElementById("projectsclick").onclick = function(e) {
   //var duration = 800 // milliseconds
   var project = document.getElementById("projects");
   //zenscroll.center( project, duration, offset );
-  zenscroll.intoView(project);
+  zenscroll.center(project);
 }
 
 
@@ -52,7 +52,7 @@ document.getElementById("contactclick").onclick = function(e) {
   var duration = 800 // milliseconds
   var contact = document.getElementById("contact-section");
   //zenscroll.center( tech, duration, offset );
-  zenscroll.intoView(contact);
+  zenscroll.center(contact);
 }
 
 /*
@@ -71,7 +71,7 @@ document.getElementById("home-scroll-down").onclick = function(e) {
   
   var about = document.getElementById("about-me");
   //zenscroll.center( about, duration, offset );
-  zenscroll.intoView(about);
+  zenscroll.center(about);
 }
 
 
